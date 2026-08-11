@@ -623,6 +623,172 @@ main {
     margin-top: 30px;
 }
 
+/* =========================
+   RESOURCES PAGE
+   ========================= */
+
+.resources-hero {
+    background-color: #fff8f2;
+    padding: 100px 20px;
+}
+
+.resources-hero h1 {
+    color: #1f477d;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 20px 0 30px;
+    max-width: 850px;
+}
+
+.resources-hero-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 850px;
+}
+
+/* =========================
+   RESOURCE CATEGORIES
+   ========================= */
+
+.resource-categories {
+    background-color: var(--deep-blue);
+    padding: 90px 40px;
+}
+
+.resource-categories .section-eyebrow {
+    color: var(--orange);
+}
+
+.resource-categories h2 {
+    color: var(--white);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.resource-categories-intro {
+    color: var(--white);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 750px;
+    margin-bottom: 50px;
+}
+
+.resource-categories .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.resource-categories .resource-card {
+    background-color: var(--white);
+    border: none;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.resource-number {
+    color: var(--orange);
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.resource-categories .resource-card h3 {
+    color: var(--deep-blue);
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+}
+
+.resource-categories .resource-card > p:last-child {
+    color: var(--dark-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================
+   FEATURED RESOURCES
+   ========================= */
+
+.featured-resources {
+    background-color: #fff8f2;
+    padding: 90px 40px;
+}
+
+.featured-resources h2 {
+    color: var(--deep-blue);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.featured-resources-intro {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.featured-resource-list {
+    border-top: 2px solid var(--deep-blue);
+}
+
+.featured-resource-item {
+    padding: 35px 0;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.featured-resource-type {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.featured-resource-item h3 {
+    color: var(--deep-blue);
+    font-size: 1.5rem;
+    margin: 0 0 12px;
+}
+
+.featured-resource-item p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 0;
+}
+
+/* =========================
+   RESOURCES CTA
+   ========================= */
+
+.resources-cta {
+    padding: 80px 20px;
+    background-color: #f7f1eb;
+}
+
+.resources-cta h2 {
+    color: #1f477c;
+    font-size: 2.5rem;
+    margin: 10px 0 20px;
+}
+
+.resources-cta-text {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.resources-cta-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 @media (max-width: 700px) {
 
     .site-header {
@@ -783,6 +949,85 @@ main {
 
 .community-cta h2 {
     font-size: 2.2rem;
+}
+
+.resource-categories {
+    padding: 60px 20px;
+}
+
+.resource-categories h2 {
+    font-size: 2.2rem;
+}
+
+.resource-categories .resource-grid {
+    grid-template-columns: 1fr;
+}
+
+.resource-categories .resource-card {
+    padding: 25px;
+}
+
+.featured-resources {
+    padding: 60px 20px;
+}
+
+.featured-resources h2 {
+    font-size: 2.2rem;
+}
+
+.featured-resource-item {
+    padding: 28px 0;
+}
+
+/* Resources page mobile */
+
+.resources-hero {
+    padding: 60px 20px;
+}
+
+.resources-hero h1 {
+    font-size: 2.7rem;
+}
+
+.resources-hero-text {
+    font-size: 1.05rem;
+}
+
+.resources-categories {
+    padding: 60px 20px;
+}
+
+.resources-categories h2 {
+    font-size: 2.2rem;
+}
+
+.resources-grid {
+    grid-template-columns: 1fr;
+}
+
+.resource-card {
+    padding: 25px;
+}
+
+.resources-directory {
+    padding: 60px 20px;
+}
+
+.resources-directory h2 {
+    font-size: 2.2rem;
+}
+
+.resources-cta {
+    padding: 60px 20px;
+}
+
+.resources-cta h2 {
+    font-size: 2.2rem;
+}
+
+.resources-cta-actions {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 }
