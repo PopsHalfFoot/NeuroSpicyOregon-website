@@ -65,6 +65,66 @@ main {
    RESPONSIVE HEADER
    ========================= */
 
+
+   /* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-eyebrow {
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin: 10px 0 20px;
+    font-size: 4rem;
+    line-height: 1.05;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-primary {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.button-secondary {
+    border: 2px solid var(--deep-blue);
+    color: var(--deep-blue);
+}
+
 @media (max-width: 700px) {
 
     .site-header {
@@ -81,5 +141,14 @@ main {
     main {
         padding: 30px 20px;
     }
+
+    .hero {
+    min-height: auto;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
 
 }
