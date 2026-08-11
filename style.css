@@ -36,6 +36,20 @@ p {
     padding: 20px 40px;
 }
 
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 85px;
+    height: 60px;
+    object-fit: contain;
+}
+
 .brand-name {
     color: var(--white);
     font-size: 1.5rem;
@@ -197,6 +211,146 @@ main {
     line-height: 1.6;
 }
 
+/* =========================
+   RESOURCES SECTION
+   ========================= */
+
+.resources {
+    padding: 80px 40px;
+    background-color: var(--white);
+}
+
+.resources h2 {
+    color: var(--deep-blue);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.resource-card {
+    display: block;
+    padding: 30px;
+    border: 2px solid var(--deep-blue);
+    border-radius: 12px;
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+.resource-card h3 {
+    color: var(--deep-blue);
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.resource-card p {
+    line-height: 1.6;
+}
+
+.resource-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   CALL TO ACTION
+   ========================= */
+
+.cta {
+    background-color: var(--deep-blue);
+    padding: 90px 40px;
+    color: var(--white);
+}
+
+.cta-eyebrow {
+    color: var(--orange);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.cta h2 {
+    color: var(--white);
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    max-width: 700px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    background-color: var(--deep-blue);
+    color: var(--white);
+    padding: 60px 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    font-size: 1.8rem;
+    margin: 0 0 5px;
+}
+
+.footer-brand p {
+    color: var(--orange);
+    font-weight: bold;
+    margin: 0 0 30px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    color: var(--orange);
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 700px) {
 
     .site-header {
@@ -218,6 +372,7 @@ main {
     min-height: auto;
     padding: 50px 20px;
 }
+
 .features {
     padding: 50px 20px;
 }
@@ -247,6 +402,43 @@ main {
 
 .intro .section-container > p:last-child {
     font-size: 1rem;
+}
+
+.resources {
+    padding: 50px 20px;
+}
+
+.resources h2 {
+    font-size: 2rem;
+}
+
+.resource-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.resource-card {
+    padding: 25px;
+}
+
+.cta {
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+}
+
+.cta-text {
+    font-size: 1rem;
+}
+
+.site-footer {
+    padding: 50px 20px;
+}
+
+.footer-nav {
+    gap: 15px;
 }
 
 }
