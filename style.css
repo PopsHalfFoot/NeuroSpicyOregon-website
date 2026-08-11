@@ -502,6 +502,127 @@ main {
     margin-top: 30px;
 }
 
+/* =========================
+   COMMUNITY PAGE
+   ========================= */
+
+.community-hero {
+    background-color: var(--cream);
+    padding: 90px 40px 110px;
+}
+
+.community-hero .page-eyebrow {
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.community-hero h1 {
+    color: var(--deep-blue);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 0 30px;
+    max-width: 850px;
+}
+
+.community-hero-text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0;
+}
+
+/* =========================
+   COMMUNITY CONNECT SECTION
+   ========================= */
+
+.community-connect {
+    background-color: var(--deep-blue);
+    padding: 90px 40px;
+}
+
+.community-connect .section-eyebrow {
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    margin-bottom: 15px;
+}
+
+.community-connect h2 {
+    color: var(--white);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.community-connect-intro {
+    color: var(--white);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 750px;
+    margin-bottom: 50px;
+}
+
+.community-connect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.community-card {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.community-card-number {
+    display: block;
+    color: var(--orange);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.community-card h3 {
+    color: var(--deep-blue);
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+}
+
+.community-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.community-cta {
+    background-color: var(--light-background);
+    padding: 100px 40px;
+}
+
+.community-cta h2 {
+    color: var(--deep-blue);
+    font-size: 3rem;
+    line-height: 1.15;
+    max-width: 750px;
+    margin: 10px 0 20px;
+}
+
+.community-cta-text {
+    max-width: 750px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.community-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
 @media (max-width: 700px) {
 
     .site-header {
@@ -625,6 +746,42 @@ main {
 }
 
 .about-cta h2 {
+    font-size: 2.2rem;
+}
+
+.community-hero {
+    padding: 60px 20px 70px;
+}
+
+.community-hero h1 {
+    font-size: 2.7rem;
+}
+
+.community-hero-text {
+    font-size: 1.05rem;
+}
+
+.community-connect {
+    padding: 60px 20px;
+}
+
+.community-connect h2 {
+    font-size: 2.2rem;
+}
+
+.community-connect-grid {
+    grid-template-columns: 1fr;
+}
+
+.community-card {
+    padding: 25px;
+}
+
+.community-cta {
+    padding: 60px 20px;
+}
+
+.community-cta h2 {
     font-size: 2.2rem;
 }
 
