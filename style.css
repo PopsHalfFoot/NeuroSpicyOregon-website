@@ -1783,6 +1783,33 @@ select:focus-visible {
     outline-offset: 4px;
 }
 
+/* =====================================================
+   WHERE WE ARE SO FAR
+   ===================================================== */
+
+.where-we-are .section-intro {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.where-we-are .blog-grid {
+    margin-top: 45px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.where-we-are .blog-card-featured {
+    grid-column: auto;
+}
+
+.where-we-are .blog-card {
+    height: 100%;
+}
+
+.where-we-are .blog-button {
+    margin-top: 38px;
+}
+
 /* =========================================================
    22. TABLET
    ========================================================= */
