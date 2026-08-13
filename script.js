@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        02. MOBILE NAVIGATION
-    ===================================================== */
+       ===================================================== */
 
     const menuToggle = document.getElementById("menuToggle");
     const mainNavigation = document.getElementById("mainNavigation");
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        03. CURRENT YEAR IN FOOTER
-    ===================================================== */
+       ===================================================== */
 
     const yearElement =
         document.getElementById("year");
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        04. CLOSE MOBILE MENU WHEN WINDOW RESIZES
-    ===================================================== */
+       ===================================================== */
 
     window.addEventListener("resize", () => {
 
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        05. ESCAPE KEY CLOSES MOBILE MENU
-    ===================================================== */
+       ===================================================== */
 
     document.addEventListener("keydown", (event) => {
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        06. SMOOTH INTERNAL NAVIGATION
-    ===================================================== */
+       ===================================================== */
 
     const internalLinks =
         document.querySelectorAll(
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        07. HEADER SHADOW WHILE SCROLLING
-    ===================================================== */
+       ===================================================== */
 
     const siteHeader =
         document.querySelector(
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        08. FADE-IN SECTIONS
-    ===================================================== */
+       ===================================================== */
 
     /*
         We only add this behavior if the browser supports
@@ -281,7 +281,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 ".interest-card, " +
                 ".timeline-item, " +
                 ".leader-card, " +
-                ".journal-card"
+                ".journal-card, " +
+                ".blog-card"
             );
 
 
@@ -338,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        09. CONSOLE MESSAGE
-    ===================================================== */
+       ===================================================== */
 
     /*
         This is intentionally simple.
