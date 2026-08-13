@@ -1,1622 +1,1784 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Neuro Spicy Collective | Oregon</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Neuro Spicy Collective is an Oregon-based collective working toward a future of neurodiversity awareness, community, regenerative farming, homesteading, land stewardship, camping, events, and more."
+        content="Neuro Spicy Collective is an Oregon-based collective building toward neurodiversity awareness, regenerative farming, land stewardship, community, homesteading, and future opportunities."
     >
 
-    <meta name="theme-color" content="#29483b">
+    <meta
+        name="keywords"
+        content="Neuro Spicy Collective, neurodiversity, Oregon, regenerative farming, homesteading, land stewardship, community, advocacy"
+    >
+
+    <meta
+        name="author"
+        content="Neuro Spicy Collective LLC"
+    >
+
+    <title>
+        Neuro Spicy Collective | Keep It Spicy!
+    </title>
+
+
+    <!-- =====================================================
+         SOCIAL SHARING
+         ===================================================== -->
+
+    <meta
+        property="og:title"
+        content="Neuro Spicy Collective | Keep It Spicy!"
+    >
+
+    <meta
+        property="og:description"
+        content="A community growing toward neurodiversity awareness, land stewardship, regenerative farming, and shared possibilities."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://neurospicyoregon.com"
+    >
+
+
+    <!-- =====================================================
+         STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         We can replace this with a dedicated favicon later.
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="images/neuro-spicy-header-logo.png"
+        type="image/png"
+    >
 
-    <style>
-        :root {
-            --forest: #29483b;
-            --forest-dark: #1d342b;
-            --sage: #7f9b78;
-            --sage-light: #dfe8dc;
-            --cream: #f7f3e8;
-            --warm-white: #fffdf8;
-            --gold: #c99b4a;
-            --brown: #654d3b;
-            --text: #29312d;
-            --muted: #65716b;
-            --border: #d9ded7;
-            --shadow: 0 12px 35px rgba(35, 55, 44, 0.10);
-            --radius: 18px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            background: var(--warm-white);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .container {
-            width: min(1180px, 92%);
-            margin: 0 auto;
-        }
-
-        /* =========================================
-           HEADER
-        ========================================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 253, 248, 0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(41, 72, 59, 0.10);
-        }
-
-        .nav {
-            min-height: 82px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            color: var(--forest);
-        }
-
-        .logo-mark {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--forest);
-            color: var(--cream);
-            display: grid;
-            place-items: center;
-            font-size: 22px;
-            font-weight: 900;
-        }
-
-        .logo-text {
-            line-height: 1.05;
-        }
-
-        .logo-name {
-            font-size: 1.05rem;
-            letter-spacing: 0.02em;
-        }
-
-        .logo-subtitle {
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: var(--muted);
-            margin-top: 4px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--text);
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--forest);
-        }
-
-        .nav-button {
-            background: var(--forest);
-            color: white !important;
-            padding: 11px 18px;
-            border-radius: 999px;
-        }
-
-        .nav-button:hover {
-            background: var(--forest-dark);
-        }
-
-        .menu-toggle {
-            display: none;
-            border: none;
-            background: none;
-            font-size: 28px;
-            color: var(--forest);
-            cursor: pointer;
-        }
-
-        /* =========================================
-           HERO
-        ========================================= */
-
-        .hero {
-            min-height: 720px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(29, 52, 43, 0.96) 0%,
-                    rgba(29, 52, 43, 0.82) 45%,
-                    rgba(29, 52, 43, 0.40) 100%
-                ),
-                url("images/hero.jpg");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        /*
-            Replace images/hero.jpg with your own Oregon,
-            forest, farm, or homestead photograph.
-
-            If you don't have one yet, the hero will simply
-            use the background color.
-        */
-
-        .hero-content {
-            max-width: 760px;
-            color: white;
-            padding: 90px 0;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: #dce8d8;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(3.1rem, 7vw, 6.3rem);
-            line-height: 0.98;
-            letter-spacing: -0.045em;
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            color: #d7e5c8;
-        }
-
-        .hero p {
-            max-width: 680px;
-            font-size: 1.2rem;
-            line-height: 1.75;
-            color: rgba(255,255,255,0.92);
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 50px;
-            padding: 13px 23px;
-            border-radius: 999px;
-            font-weight: 750;
-            transition: all 0.2s ease;
-        }
-
-        .button-primary {
-            background: var(--gold);
-            color: white;
-        }
-
-        .button-primary:hover {
-            transform: translateY(-2px);
-            filter: brightness(0.95);
-        }
-
-        .button-light {
-            background: rgba(255,255,255,0.12);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.4);
-        }
-
-        .button-light:hover {
-            background: rgba(255,255,255,0.20);
-        }
-
-        /* =========================================
-           INTRO
-        ========================================= */
-
-        .intro {
-            padding: 110px 0;
-            background: var(--cream);
-        }
-
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .section-label {
-            color: var(--sage);
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            font-weight: 800;
-            font-size: 0.75rem;
-            margin-bottom: 14px;
-        }
-
-        .intro h2,
-        .section-heading h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            color: var(--forest);
-            font-size: clamp(2.3rem, 4vw, 4rem);
-            line-height: 1.1;
-            letter-spacing: -0.035em;
-        }
-
-        .intro p {
-            font-size: 1.08rem;
-            color: var(--muted);
-            margin-bottom: 18px;
-        }
-
-        .big-statement {
-            border-left: 4px solid var(--gold);
-            padding-left: 25px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.55rem;
-            line-height: 1.45;
-            color: var(--forest);
-        }
-
-        /* =========================================
-           WHY NEURO SPICY
-        ========================================= */
-
-        .neurospicy {
-            padding: 110px 0;
-            background: var(--warm-white);
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: start;
-        }
-
-        .section-heading {
-            margin-bottom: 35px;
-        }
-
-        .section-heading p {
-            margin-top: 20px;
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        .neuro-card {
-            background: var(--sage-light);
-            padding: 45px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .neuro-card h3 {
-            font-family: Georgia, "Times New Roman", serif;
-            color: var(--forest);
-            font-size: 2rem;
-            margin-bottom: 18px;
-        }
-
-        .neuro-card p {
-            color: #45544c;
-        }
-
-        .keep-neuro {
-            margin-top: 28px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(41,72,59,0.15);
-        }
-
-        .keep-neuro strong {
-            display: block;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.5rem;
-            color: var(--forest);
-            margin-bottom: 8px;
-        }
-
-        /* =========================================
-           COLLECTIVE
-        ========================================= */
-
-        .collective {
-            padding: 110px 0;
-            background: var(--forest);
-            color: white;
-        }
-
-        .collective .section-label {
-            color: #c9dabb;
-        }
-
-        .collective h2 {
-            color: white;
-        }
-
-        .collective-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .collective p {
-            color: rgba(255,255,255,0.82);
-            font-size: 1.08rem;
-            margin-bottom: 20px;
-        }
-
-        .quote {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 2rem;
-            line-height: 1.35;
-            color: #dbe8d2;
-            border-left: 3px solid var(--gold);
-            padding-left: 30px;
-        }
-
-        /* =========================================
-           INTERESTS
-        ========================================= */
-
-        .interests {
-            padding: 110px 0;
-            background: var(--cream);
-        }
-
-        .center-heading {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 55px;
-        }
-
-        .interest-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .interest-card {
-            background: var(--warm-white);
-            padding: 32px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .interest-icon {
-            font-size: 2.1rem;
-            margin-bottom: 18px;
-        }
-
-        .interest-card h3 {
-            color: var(--forest);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.45rem;
-            margin-bottom: 10px;
-        }
-
-        .interest-card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        /* =========================================
-           JOURNEY
-        ========================================= */
-
-        .journey {
-            padding: 110px 0;
-            background: var(--warm-white);
-        }
-
-        .journey-box {
-            background: var(--forest);
-            color: white;
-            border-radius: 28px;
-            padding: 65px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .journey-box h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.4rem, 4vw, 3.8rem);
-            line-height: 1.05;
-            margin-bottom: 20px;
-        }
-
-        .journey-box p {
-            color: rgba(255,255,255,0.8);
-        }
-
-        .journey-list {
-            list-style: none;
-        }
-
-        .journey-list li {
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.9);
-        }
-
-        .journey-list li:last-child {
-            border-bottom: none;
-        }
-
-        .journey-list span {
-            display: inline-block;
-            width: 35px;
-            color: var(--gold);
-            font-weight: 800;
-        }
-
-        /* =========================================
-           BOARD
-        ========================================= */
-
-        .board {
-            padding: 110px 0;
-            background: var(--cream);
-        }
-
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .person-card {
-            background: var(--warm-white);
-            border-radius: var(--radius);
-            padding: 38px;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .person-photo {
-            width: 125px;
-            height: 125px;
-            border-radius: 50%;
-            margin: 0 auto 22px;
-            background: var(--sage-light);
-            display: grid;
-            place-items: center;
-            color: var(--forest);
-            font-size: 2rem;
-            font-weight: 800;
-        }
-
-        .person-card h3 {
-            font-family: Georgia, "Times New Roman", serif;
-            color: var(--forest);
-            font-size: 1.6rem;
-        }
-
-        .person-role {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin: 5px 0 15px;
-        }
-
-        .person-card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        /* =========================================
-           CONTACT
-        ========================================= */
-
-        .contact {
-            padding: 100px 0;
-            background: var(--sage-light);
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            color: var(--forest);
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 18px;
-        }
-
-        .contact p {
-            max-width: 650px;
-            margin: 0 auto 30px;
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        .contact-email {
-            display: inline-block;
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--forest);
-            margin-bottom: 25px;
-        }
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
-        footer {
-            background: var(--forest-dark);
-            color: white;
-            padding: 65px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 60px;
-            padding-bottom: 45px;
-        }
-
-        footer h3 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.35rem;
-            margin-bottom: 16px;
-        }
-
-        footer p {
-            color: rgba(255,255,255,0.65);
-            max-width: 430px;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 9px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.5);
-            font-size: 0.85rem;
-        }
-
-        /* =========================================
-           RESPONSIVE
-        ========================================= */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                position: absolute;
-                top: 82px;
-                left: 0;
-                right: 0;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                background: var(--warm-white);
-                padding: 20px;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 12px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .intro-grid,
-            .two-column,
-            .collective-grid,
-            .journey-box {
-                grid-template-columns: 1fr;
-            }
-
-            .interest-grid,
-            .board-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .journey-box {
-                padding: 45px;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .hero {
-                min-height: 650px;
-            }
-
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .intro,
-            .neurospicy,
-            .collective,
-            .interests,
-            .journey,
-            .board {
-                padding: 75px 0;
-            }
-
-            .interest-grid,
-            .board-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .neuro-card,
-            .journey-box {
-                padding: 30px;
-            }
-
-            .quote {
-                font-size: 1.5rem;
-            }
-
-            .logo-subtitle {
-                display: none;
-            }
-        }
-    </style>
 </head>
 
-<body>
 
-    <!-- =========================================
-         HEADER
-    ========================================= -->
+<body id="top">
 
-    <header>
-        <div class="container nav">
 
-            <a href="#top" class="logo">
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
 
-                <div class="logo-mark">
-                    NS
-                </div>
+<header class="site-header">
 
-                <div class="logo-text">
-                    <div class="logo-name">
-                        Neuro Spicy Collective
-                    </div>
+    <div class="container nav">
 
-                    <div class="logo-subtitle">
-                        Oregon • Community • Land • Possibility
-                    </div>
-                </div>
 
-            </a>
+        <!-- Logo -->
 
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                onclick="toggleMenu()"
+        <a
+            href="#home"
+            class="logo"
+            aria-label="Neuro Spicy Collective home"
+        >
+
+            <img
+                src="images/neuro-spicy-header-logo.png"
+                alt="Neuro Spicy Oregon"
+                class="header-logo-image"
             >
-                ☰
-            </button>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#neurodiversity">Neurodiversity</a></li>
-                <li><a href="#interests">Our Interests</a></li>
-                <li><a href="#journey">Our Journey</a></li>
-                <li><a href="#leaders">Our Leaders</a></li>
-                <li><a href="#contact">Contact</a></li>
+        </a>
 
-                <!-- Replace # with your future donation page -->
+
+        <!-- Mobile menu button -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- Main navigation -->
+
+        <nav
+            class="main-navigation"
+            id="mainNavigation"
+            aria-label="Main navigation"
+        >
+
+            <ul class="nav-links">
+
                 <li>
-                    <a class="nav-button" href="#support">
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#neurodiversity">
+                        Neurodiversity
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#vision">
+                        Our Vision
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#journey">
+                        Our Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#leaders">
+                        Our Leaders
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#support"
+                        class="nav-support"
+                    >
                         Support Us
                     </a>
                 </li>
+
             </ul>
 
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section
+    class="hero"
+    id="home"
+    aria-labelledby="hero-title"
+>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+
+            <p class="eyebrow">
+                Neuro Spicy Collective • Oregon
+            </p>
+
+
+            <h1 id="hero-title">
+
+                Keep it
+                <span class="hero-accent">
+                    spicy!
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                We're building a collective around
+                neurodiversity, community, land,
+                creativity, and possibility — one
+                step at a time.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#about"
+                    class="button button-primary"
+                >
+                    Discover Our Story
+                </a>
+
+                <a
+                    href="#support"
+                    class="button button-outline"
+                >
+                    Support the Collective
+                </a>
+
+            </div>
+
+
+            <p class="hero-note">
+                Different minds. Shared possibilities.
+            </p>
+
+
         </div>
-    </header>
+
+    </div>
+
+</section>
 
 
-    <main id="top">
 
-        <!-- =========================================
-             HERO
-        ========================================= -->
+<!-- =========================================================
+     ABOUT / MANIFESTO
+     ========================================================= -->
 
-        <section class="hero">
+<section
+    class="section manifesto"
+    id="about"
+    aria-labelledby="about-title"
+>
 
-            <div class="container">
+    <div class="container">
 
-                <div class="hero-content">
+        <div class="manifesto-grid">
 
-                    <div class="eyebrow">
-                        Neuro Spicy Collective • Oregon
-                    </div>
 
-                    <h1>
-                        Different minds.<br>
-                        <span>Shared land.</span><br>
-                        A community growing together.
-                    </h1>
+            <div class="manifesto-heading">
+
+                <p class="eyebrow">
+                    Why Neuro Spicy?
+                </p>
+
+                <h2 id="about-title">
+                    A different way
+                    of seeing the world.
+                </h2>
+
+            </div>
+
+
+            <div class="manifesto-content">
+
+                <p class="lead">
+
+                    Neuro Spicy is a playful,
+                    informal term some people use
+                    to describe themselves as
+                    neurodivergent.
+
+                </p>
+
+
+                <p>
+
+                    It celebrates the idea that
+                    different brains bring different
+                    ways of thinking, learning,
+                    communicating, creating, and
+                    experiencing the world.
+
+                </p>
+
+
+                <p>
+
+                    Someone who identifies as
+                    neurospicy may be autistic,
+                    have ADHD, dyslexia, dyspraxia,
+                    Tourette syndrome, or another
+                    neurological difference.
+
+                </p>
+
+
+                <p>
+
+                    Not everyone who is neurodivergent
+                    uses the term <em>neurospicy</em>,
+                    and that's okay. It's a personal
+                    choice.
+
+                </p>
+
+
+                <div class="statement">
 
                     <p>
-                        We're building something from the ground up.
-                        A vision for community, neurodiversity awareness,
-                        regenerative farming, land stewardship, homesteading,
-                        and a place where different kinds of people can
-                        belong and thrive.
+
+                        At Neuro Spicy, we use the
+                        term with warmth, humor,
+                        and pride.
+
                     </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#about" class="button button-primary">
-                            Explore Our Vision
-                        </a>
-
-                        <a href="#journey" class="button button-light">
-                            Follow Our Journey
-                        </a>
-
-                    </div>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="manifesto" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     NEURODIVERSITY
+     ========================================================= -->
+
+<section
+    class="section neurodiversity"
+    id="neurodiversity"
+    aria-labelledby="neurodiversity-title"
+>
+
+    <div class="container">
 
 
-        <!-- =========================================
-             INTRO
-        ========================================= -->
+        <div class="section-intro">
 
-        <section class="intro" id="about">
+            <p class="eyebrow">
+                Understanding Neurodiversity
+            </p>
 
-            <div class="container intro-grid">
+            <h2 id="neurodiversity-title">
+                Different brains
+                are part of being human.
+            </h2>
 
-                <div>
+            <p>
 
-                    <div class="section-label">
-                        Welcome
-                    </div>
+                We want to help create a community
+                where different ways of thinking,
+                learning, communicating, and
+                experiencing the world are understood,
+                respected, and supported.
 
-                    <h2>
-                        We're just getting started.
-                    </h2>
+            </p>
+
+        </div>
+
+
+        <div class="neuro-grid">
+
+
+            <article class="neuro-card neuro-card-featured">
+
+                <p class="card-label">
+                    What Is Neurodiversity?
+                </p>
+
+                <h3>
+                    Many ways to
+                    experience the world.
+                </h3>
+
+                <p>
+
+                    Neurodiversity is the idea that
+                    differences in how human brains
+                    develop and function are a
+                    natural part of human diversity.
+
+                </p>
+
+                <p>
+
+                    People can differ in how they
+                    process information, communicate,
+                    learn, focus, socialize, regulate
+                    emotions, respond to sensory
+                    experiences, and interact with
+                    the world.
+
+                </p>
+
+            </article>
+
+
+            <article class="neuro-card">
+
+                <p class="card-label">
+                    Our Perspective
+                </p>
+
+                <h3>
+                    Support the person.
+                    Celebrate the person.
+                </h3>
+
+                <p>
+
+                    Neurodiversity does not mean
+                    ignoring disability, challenges,
+                    or the need for support.
+
+                </p>
+
+                <p>
+
+                    It means providing appropriate
+                    accommodations and services
+                    while recognizing people's
+                    strengths, individuality,
+                    dignity, and potential.
+
+                </p>
+
+
+                <div class="keep-neuro">
+
+                    <strong>
+                        Keep it spicy.
+                    </strong>
+
+                    <p>
+                        Different minds belong here.
+                    </p>
 
                 </div>
 
-                <div>
+            </article>
 
-                    <p>
-                        Neuro Spicy Collective is an Oregon-based collective
-                        founded around a simple idea: people with different
-                        ways of thinking, learning, creating, and experiencing
-                        the world deserve places where they can belong,
-                        contribute, and thrive.
-                    </p>
 
-                    <p>
-                        We're at the beginning of our journey. Our long-term
-                        vision includes finding land where we can develop a
-                        regenerative homestead, grow specialty herbs and
-                        other crops, practice responsible land stewardship,
-                        host camping and community events, and create
-                        opportunities for neurodiversity awareness and
-                        education.
-                    </p>
+        </div>
 
-                    <div class="big-statement">
-                        We don't have the finished property yet.
+    </div>
+
+</section>
+
+<section id="neurodiversity" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     WHO WE ARE
+     ========================================================= -->
+
+<section
+    class="section story"
+    id="who-we-are"
+    aria-labelledby="story-title"
+>
+
+    <div class="container">
+
+        <div class="story-grid">
+
+
+            <div class="story-heading">
+
+                <p class="eyebrow">
+                    Who We Are
+                </p>
+
+                <h2 id="story-title">
+                    This is the
+                    beginning.
+                </h2>
+
+            </div>
+
+
+            <div class="story-content">
+
+                <p>
+
+                    Brian, Wendy, Adrienne, and
+                    like-minded friends got together
+                    and started talking about what
+                    it would look like to build
+                    something of our own.
+
+                </p>
+
+
+                <p>
+
+                    We imagined a homestead where
+                    people could come together,
+                    grow things, care for the land,
+                    build businesses, spend time
+                    outdoors, and create a community
+                    where people understand and
+                    celebrate neurodiversity.
+
+                </p>
+
+
+                <p>
+
+                    We know that vision won't happen
+                    overnight.
+
+                </p>
+
+
+                <p>
+
+                    That's why we're documenting the
+                    journey from the very beginning —
+                    including the ideas, research,
+                    setbacks, discoveries, land search,
+                    development plans, and everything
+                    we learn along the way.
+
+                </p>
+
+
+                <blockquote class="story-quote">
+
+                    We're starting with an idea.
+                    Now we're building the path.
+
+                </blockquote>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="story" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     OUR VISION
+     ========================================================= -->
+
+<section
+    class="section future"
+    id="vision"
+    aria-labelledby="vision-title"
+>
+
+    <div class="container">
+
+
+        <div class="section-intro future-intro">
+
+            <p class="eyebrow">
+                What We're Building
+            </p>
+
+            <h2 id="vision-title">
+                A vision that
+                starts with land.
+            </h2>
+
+            <p>
+
+                Our long-term vision is still
+                taking shape. We want to build
+                thoughtfully, sustainably, and
+                in a way that creates opportunities
+                for people and respects the land.
+
+            </p>
+
+        </div>
+
+
+        <div class="future-grid">
+
+
+            <article class="future-card">
+
+                <span class="future-number">
+                    01
+                </span>
+
+                <div class="future-icon"
+                     aria-hidden="true">
+                    🌱
+                </div>
+
+                <h3>
+                    Regenerative Farming
+                </h3>
+
+                <p>
+
+                    We envision a small specialty
+                    herb farm using regenerative,
+                    no-till practices and thoughtful
+                    land stewardship.
+
+                </p>
+
+            </article>
+
+
+            <article class="future-card">
+
+                <span class="future-number">
+                    02
+                </span>
+
+                <div class="future-icon"
+                     aria-hidden="true">
+                    🌲
+                </div>
+
+                <h3>
+                    Land & Forestry
+                </h3>
+
+                <p>
+
+                    We're interested in finding
+                    land where agriculture,
+                    forestry, habitat, recreation,
+                    and responsible stewardship
+                    can work together.
+
+                </p>
+
+            </article>
+
+
+            <article class="future-card">
+
+                <span class="future-number">
+                    03
+                </span>
+
+                <div class="future-icon"
+                     aria-hidden="true">
+                    🏕️
+                </div>
+
+                <h3>
+                    Camping & Events
+                </h3>
+
+                <p>
+
+                    We hope to eventually create
+                    outdoor experiences, camping
+                    opportunities, gatherings,
+                    and events that bring people
+                    together.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="future" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     OUR INTERESTS
+     ========================================================= -->
+
+<section
+    class="section interests"
+    id="interests"
+    aria-labelledby="interests-title"
+>
+
+    <div class="container">
+
+
+        <div class="section-intro">
+
+            <p class="eyebrow">
+                Our Interests
+            </p>
+
+            <h2 id="interests-title">
+                A collective with
+                room to grow.
+            </h2>
+
+            <p>
+
+                Our interests are broad because
+                our vision is broad. Some ideas
+                are near-term goals. Others are
+                long-term possibilities.
+
+            </p>
+
+        </div>
+
+
+        <div class="interest-grid">
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🧠
+                </div>
+
+                <h3>
+                    Neurodiversity
+                </h3>
+
+                <p>
+
+                    Awareness, education,
+                    acceptance, advocacy,
+                    and community.
+
+                </p>
+
+            </article>
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🌱
+                </div>
+
+                <h3>
+                    Farming
+                </h3>
+
+                <p>
+
+                    Specialty herbs, regenerative
+                    agriculture, no-till practices,
+                    and future product development.
+
+                </p>
+
+            </article>
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🏡
+                </div>
+
+                <h3>
+                    Homesteading
+                </h3>
+
+                <p>
+
+                    Learning how to build a
+                    resilient, productive,
+                    community-minded homestead.
+
+                </p>
+
+            </article>
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🌲
+                </div>
+
+                <h3>
+                    Forestry
+                </h3>
+
+                <p>
+
+                    Responsible land management,
+                    habitat, trees, and long-term
+                    stewardship.
+
+                </p>
+
+            </article>
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🐕
+                </div>
+
+                <h3>
+                    Mastadors
+                </h3>
+
+                <p>
+
+                    A future dog breeding program
+                    focused on Mastadors and
+                    responsible animal care.
+
+                </p>
+
+            </article>
+
+
+            <article class="interest-card">
+
+                <div
+                    class="interest-icon"
+                    aria-hidden="true"
+                >
+                    🤝
+                </div>
+
+                <h3>
+                    Community
+                </h3>
+
+                <p>
+
+                    Creating opportunities for
+                    people to connect, participate,
+                    learn, and belong.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="interests" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     FINDING LAND
+     ========================================================= -->
+
+<section
+    class="section journey"
+    id="land"
+    aria-labelledby="land-title"
+>
+
+    <div class="container">
+
+
+        <div class="journey-top">
+
+
+            <div class="journey-heading">
+
+                <p class="eyebrow">
+                    The Search
+                </p>
+
+                <h2 id="land-title">
+                    First,
+                    we need
+                    somewhere
+                    to grow.
+                </h2>
+
+            </div>
+
+
+            <div class="journey-intro">
+
+                <p>
+
+                    One of the biggest steps in
+                    our journey will be finding the
+                    right piece of Oregon land for
+                    our long-term vision.
+
+                </p>
+
+
+                <p>
+
+                    We're looking for property that
+                    could eventually support some
+                    combination of farming, forestry,
+                    animals, recreation, events,
+                    community, and future development.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
                         We don't have all the answers yet.
-                        We're building the vision one step at a time.
-                    </div>
+                    </strong>
 
-                </div>
+                    That's part of the journey.
+
+                </p>
 
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- =========================================
-             WHY NEURO SPICY
-        ========================================= -->
+        <div class="timeline">
 
-        <section class="neurospicy" id="neurodiversity">
 
-            <div class="container two-column">
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 01
+                </span>
+
+                <h3>
+                    Define the Vision
+                </h3>
+
+                <p>
+
+                    Research what we need from
+                    land, infrastructure, zoning,
+                    water, access, and surrounding
+                    community.
+
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 02
+                </span>
+
+                <h3>
+                    Find the Land
+                </h3>
+
+                <p>
+
+                    Explore Oregon properties and
+                    identify land that could support
+                    our long-term goals.
+
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 03
+                </span>
+
+                <h3>
+                    Build Thoughtfully
+                </h3>
+
+                <p>
+
+                    Develop the property gradually,
+                    responsibly, and with the land
+                    and community in mind.
+
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 04
+                </span>
+
+                <h3>
+                    Grow
+                </h3>
+
+                <p>
+
+                    Establish gardens, specialty
+                    crops, animals, and other
+                    agricultural projects.
+
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 05
+                </span>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+
+                    Explore products, events,
+                    experiences, and businesses
+                    that grow naturally from the land.
+
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-number">
+                    STEP 06
+                </span>
+
+                <h3>
+                    Share
+                </h3>
+
+                <p>
+
+                    Create opportunities for
+                    people to learn, connect,
+                    participate, and belong.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="journey" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     OUR JOURNEY / JOURNAL
+     ========================================================= -->
+
+<section
+    class="section journal"
+    id="journey"
+    aria-labelledby="journey-title"
+>
+
+    <div class="container">
+
+
+        <div class="section-intro">
+
+            <p class="eyebrow">
+                Follow the Journey
+            </p>
+
+            <h2 id="journey-title">
+                We're documenting
+                the whole thing.
+            </h2>
+
+            <p>
+
+                Starting a collective from scratch
+                is a journey worth documenting.
+                We want to share what we're learning,
+                what we're building, and what happens
+                along the way.
+
+            </p>
+
+        </div>
+
+
+        <div class="journal-grid">
+
+
+            <article class="journal-card journal-card-dark">
 
                 <div>
 
-                    <div class="section-label">
-                        Why Neuro Spicy?
-                    </div>
-
-                    <div class="section-heading">
-                        <h2>
-                            Different brains bring different possibilities.
-                        </h2>
-
-                        <p>
-                            Neurospicy is a playful, informal term some people
-                            use to describe themselves as neurodivergent.
-                        </p>
-                    </div>
-
-                    <p>
-                        It celebrates the idea that different brains bring
-                        different ways of thinking, learning, communicating,
-                        creating, and experiencing the world.
+                    <p class="journal-meta">
+                        The Beginning
                     </p>
-
-                    <p>
-                        Someone who identifies as neurospicy may be autistic,
-                        have ADHD, dyslexia, dyspraxia, Tourette syndrome,
-                        or another neurological difference.
-                    </p>
-
-                    <p>
-                        Not everyone who is neurodivergent uses the term
-                        neurospicy, and that's okay. It's a personal choice.
-                    </p>
-
-                </div>
-
-
-                <div class="neuro-card">
 
                     <h3>
-                        What Is Neurodiversity?
+                        From an idea
+                        to a collective.
                     </h3>
 
                     <p>
-                        Neurodiversity is the idea that differences in how
-                        human brains develop and function are a natural part
-                        of human diversity.
-                    </p>
 
-                    <br>
+                        This is where we'll document
+                        the early conversations,
+                        planning, research, and
+                        decisions that turn an idea
+                        into something real.
 
-                    <p>
-                        People can differ in how they process information,
-                        communicate, learn, focus, socialize, regulate
-                        emotions, respond to sensory experiences, and interact
-                        with the world around them.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        The neurodiversity perspective recognizes these
-                        differences without assuming there is only one
-                        "normal" or correct way for a brain to function.
-                    </p>
-
-                    <div class="keep-neuro">
-
-                        <strong>
-                            Keep It Neuro Spicy.
-                        </strong>
-
-                        <p>
-                            Our goal is simple: build a community where
-                            different minds are understood, supported,
-                            included, and celebrated.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             COLLECTIVE
-        ========================================= -->
-
-        <section class="collective">
-
-            <div class="container collective-grid">
-
-                <div>
-
-                    <div class="section-label">
-                        Who Are We?
-                    </div>
-
-                    <h2>
-                        A few people with a big idea.
-                    </h2>
-
-                </div>
-
-                <div>
-
-                    <p>
-                        Brian, Wendy, Adrienne, and a few like-minded friends
-                        started talking about how great it would be to create
-                        a homestead and eventually develop businesses and a
-                        community around it.
-                    </p>
-
-                    <p>
-                        A place where people could live, work, create, learn,
-                        and build community with people who understand,
-                        celebrate, and support neurodiversity.
-                    </p>
-
-                    <p>
-                        That conversation became Neuro Spicy Collective.
-                    </p>
-
-                    <div class="quote">
-                        "What if we could build a place where different
-                        minds could grow together?"
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             INTERESTS
-        ========================================= -->
-
-        <section class="interests" id="interests">
-
-            <div class="container">
-
-                <div class="center-heading">
-
-                    <div class="section-label">
-                        What We're Interested In
-                    </div>
-
-                    <h2 class="section-heading">
-                        Many interests. One bigger vision.
-                    </h2>
-
-                    <p>
-                        These are the areas we're exploring as we develop
-                        Neuro Spicy Collective and work toward finding the
-                        right land for our future.
                     </p>
 
                 </div>
 
+            </article>
 
-                <div class="interest-grid">
 
-                    <article class="interest-card">
+            <article class="journal-card journal-card-light">
 
-                        <div class="interest-icon">🌱</div>
-
-                        <h3>
-                            Regenerative Farming
-                        </h3>
-
-                        <p>
-                            Building healthy soil and growing specialty herbs
-                            and future crops using regenerative and no-till
-                            practices.
-                        </p>
-
-                    </article>
-
-
-                    <article class="interest-card">
-
-                        <div class="interest-icon">🌲</div>
-
-                        <h3>
-                            Land & Forestry
-                        </h3>
-
-                        <p>
-                            Learning how to responsibly steward forests,
-                            fields, habitat, water, and the natural systems
-                            around us.
-                        </p>
-
-                    </article>
-
-
-                    <article class="interest-card">
-
-                        <div class="interest-icon">🏡</div>
-
-                        <h3>
-                            Homesteading
-                        </h3>
-
-                        <p>
-                            Developing practical skills around growing food,
-                            caring for animals, maintaining land, and creating
-                            a resilient home base.
-                        </p>
-
-                    </article>
-
-
-                    <article class="interest-card">
-
-                        <div class="interest-icon">🐕</div>
-
-                        <h3>
-                            Mastadors
-                        </h3>
-
-                        <p>
-                            One of our future interests is responsible
-                            Mastador breeding, with an emphasis on healthy,
-                            well-socialized dogs.
-                        </p>
-
-                    </article>
-
-
-                    <article class="interest-card">
-
-                        <div class="interest-icon">⛺</div>
-
-                        <h3>
-                            Camping & Events
-                        </h3>
-
-                        <p>
-                            We envision eventually creating a place where
-                            people can gather for camping, events, workshops,
-                            education, and community.
-                        </p>
-
-                    </article>
-
-
-                    <article class="interest-card">
-
-                        <div class="interest-icon">🧠</div>
-
-                        <h3>
-                            Neurodiversity
-                        </h3>
-
-                        <p>
-                            Increasing awareness, understanding, acceptance,
-                            and inclusion of neurodivergent people and their
-                            experiences.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             JOURNEY
-        ========================================= -->
-
-        <section class="journey" id="journey">
-
-            <div class="container">
-
-                <div class="journey-box">
-
-                    <div>
-
-                        <div class="section-label">
-                            From Idea to Reality
-                        </div>
-
-                        <h2>
-                            Follow the journey.
-                        </h2>
-
-                        <p>
-                            We want to document the process of building
-                            Neuro Spicy Collective from scratch—the decisions,
-                            discoveries, challenges, successes, and lessons
-                            along the way.
-                        </p>
-
-                        <br>
-
-                        <a href="#contact" class="button button-primary">
-                            Follow Along
-                        </a>
-
-                    </div>
-
-
-                    <ul class="journey-list">
-
-                        <li>
-                            <span>01</span>
-                            Build the collective
-                        </li>
-
-                        <li>
-                            <span>02</span>
-                            Define our vision
-                        </li>
-
-                        <li>
-                            <span>03</span>
-                            Find the right land
-                        </li>
-
-                        <li>
-                            <span>04</span>
-                            Plan the homestead
-                        </li>
-
-                        <li>
-                            <span>05</span>
-                            Establish regenerative growing systems
-                        </li>
-
-                        <li>
-                            <span>06</span>
-                            Develop future businesses and community programs
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             LEADERS
-        ========================================= -->
-
-        <section class="board" id="leaders">
-
-            <div class="container">
-
-                <div class="center-heading">
-
-                    <div class="section-label">
-                        Meet the Collective
-                    </div>
-
-                    <h2 class="section-heading">
-                        The people behind the vision.
-                    </h2>
-
-                    <p>
-                        Neuro Spicy Collective begins with three board members
-                        who believe this idea is worth pursuing.
-                    </p>
-
-                </div>
-
-
-                <div class="board-grid">
-
-                    <article class="person-card">
-
-                        <div class="person-photo">
-                            B
-                        </div>
-
-                        <h3>
-                            Brian
-                        </h3>
-
-                        <div class="person-role">
-                            Board Member
-                        </div>
-
-                        <p>
-                            Founder and member of the team working to turn
-                            the Neuro Spicy Collective vision into reality.
-                        </p>
-
-                    </article>
-
-
-                    <article class="person-card">
-
-                        <div class="person-photo">
-                            W
-                        </div>
-
-                        <h3>
-                            Wendy
-                        </h3>
-
-                        <div class="person-role">
-                            Board Member
-                        </div>
-
-                        <p>
-                            Founding member helping shape the community,
-                            homestead, and future of the collective.
-                        </p>
-
-                    </article>
-
-
-                    <article class="person-card">
-
-                        <div class="person-photo">
-                            A
-                        </div>
-
-                        <h3>
-                            Adrienne
-                        </h3>
-
-                        <div class="person-role">
-                            Board Member
-                        </div>
-
-                        <p>
-                            Founding member bringing ideas, energy, and a
-                            shared commitment to the collective's vision.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             SUPPORT
-        ========================================= -->
-
-        <section class="contact" id="support">
-
-            <div class="container">
-
-                <div class="section-label">
-                    Support the Vision
-                </div>
-
-                <h2>
-                    We're building this together.
-                </h2>
-
-                <p>
-                    We're just getting started. As Neuro Spicy Collective
-                    develops, there will be opportunities to follow our
-                    journey, contribute ideas, volunteer, partner with us,
-                    and eventually support our work.
+                <p class="journal-meta">
+                    Coming Soon
                 </p>
 
-                <!-- Replace this with your actual donation/support URL -->
-                <a href="#contact" class="button button-primary">
-                    Learn How to Support Us
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             CONTACT
-        ========================================= -->
-
-        <section class="contact" id="contact">
-
-            <div class="container">
-
-                <div class="section-label">
-                    Get In Touch
-                </div>
-
-                <h2>
-                    Come be part of the journey.
-                </h2>
+                <h3>
+                    Our first
+                    field notes.
+                </h3>
 
                 <p>
-                    Have a question? Want to learn more about Neuro Spicy
-                    Collective? Interested in our future plans, land search,
-                    neurodiversity work, or just want to say hello?
+
+                    Land research. Farming research.
+                    Business planning. Nonprofit
+                    development. Lessons learned.
+
+                    We'll share it as we go.
+
                 </p>
 
                 <a
-                    class="contact-email"
-                    href="mailto:info@neurospicyoregon.com"
+                    href="#contact"
+                    class="button button-dark"
                 >
-                    info@neurospicyoregon.com
+                    Stay Connected
                 </a>
 
-                <br>
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="journal" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     LEADERS
+     ========================================================= -->
+
+<section
+    class="section leaders"
+    id="leaders"
+    aria-labelledby="leaders-title"
+>
+
+    <div class="container">
+
+
+        <div class="section-intro leaders-intro">
+
+            <p class="eyebrow">
+                The Collective
+            </p>
+
+            <h2 id="leaders-title">
+                Meet the people
+                behind the idea.
+            </h2>
+
+            <p>
+
+                Neuro Spicy Collective begins with
+                three board members and a growing
+                group of friends and like-minded
+                people who believe the vision is
+                worth pursuing.
+
+            </p>
+
+        </div>
+
+
+        <div class="leaders-grid">
+
+
+            <article class="leader-card">
+
+                <div
+                    class="leader-photo"
+                    aria-hidden="true"
+                >
+                    B
+                </div>
+
+                <h3>
+                    Brian
+                </h3>
+
+                <p class="leader-role">
+                    Board Member
+                </p>
+
+                <p>
+
+                    Brian is one of the founding
+                    members of Neuro Spicy Collective
+                    and part of the team working to
+                    turn the collective's long-term
+                    vision into reality.
+
+                </p>
+
+            </article>
+
+
+            <article class="leader-card">
+
+                <div
+                    class="leader-photo"
+                    aria-hidden="true"
+                >
+                    W
+                </div>
+
+                <h3>
+                    Wendy
+                </h3>
+
+                <p class="leader-role">
+                    Board Member
+                </p>
+
+                <p>
+
+                    Wendy is one of the founding
+                    members helping shape the
+                    collective, its values, and
+                    its vision for community.
+
+                </p>
+
+            </article>
+
+
+            <article class="leader-card">
+
+                <div
+                    class="leader-photo"
+                    aria-hidden="true"
+                >
+                    A
+                </div>
+
+                <h3>
+                    Adrienne
+                </h3>
+
+                <p class="leader-role">
+                    Board Member
+                </p>
+
+                <p>
+
+                    Adrienne is one of the founding
+                    members helping build the
+                    collective and imagine what
+                    Neuro Spicy can become.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="leaders" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section
+    class="section contact"
+    id="contact"
+    aria-labelledby="contact-title"
+>
+
+    <div class="container">
+
+        <div class="contact-content">
+
+
+            <p class="eyebrow">
+                Let's Connect
+            </p>
+
+
+            <h2 id="contact-title">
+                Keep in touch.
+            </h2>
+
+
+            <p>
+
+                Whether you're interested in
+                neurodiversity, our future land
+                search, regenerative farming,
+                community building, or simply
+                want to say hello — we'd love
+                to hear from you.
+
+            </p>
+
+
+            <a
+                href="mailto:info@neurospicyoregon.com"
+                class="contact-email"
+            >
+                info@neurospicyoregon.com
+            </a>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    href="tel:+15035586229"
+                    class="button button-dark"
+                >
+                    (503) 558-6229
+                </a>
+
+
+                <!--
+                    Replace this URL with the actual
+                    Facebook page once established.
+                -->
 
                 <a
                     href="https://www.facebook.com/"
+                    class="button button-dark"
                     target="_blank"
                     rel="noopener"
-                    class="button button-primary"
                 >
-                    Find Us on Facebook
+                    Facebook
                 </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
-
-    <footer>
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div>
-
-                    <div class="logo">
-
-                        <div class="logo-mark">
-                            NS
-                        </div>
-
-                        <div class="logo-text">
-
-                            <div class="logo-name">
-                                Neuro Spicy Collective
-                            </div>
-
-                            <div class="logo-subtitle">
-                                Oregon
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <br>
-
-                    <p>
-                        Different minds. Shared land. A community growing
-                        together.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Explore
-                    </h3>
-
-                    <ul class="footer-links">
-
-                        <li>
-                            <a href="#about">About Us</a>
-                        </li>
-
-                        <li>
-                            <a href="#neurodiversity">
-                                Neurodiversity
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#interests">
-                                Our Interests
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#journey">
-                                Our Journey
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#leaders">
-                                Our Leaders
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Contact
-                    </h3>
-
-                    <ul class="footer-links">
-
-                        <li>
-                            <a href="mailto:info@neurospicyoregon.com">
-                                info@neurospicyoregon.com
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="tel:+15035586229">
-                                (503) 558-6229
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="https://www.facebook.com/"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                Facebook
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="copyright">
-
-                © <span id="year"></span> Neuro Spicy Collective LLC.
-                All rights reserved.
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     SUPPORT
+     ========================================================= -->
+
+<section
+    class="section support"
+    id="support"
+    aria-labelledby="support-title"
+>
+
+    <div class="container">
+
+        <div class="support-content">
 
 
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================= -->
-
-    <script>
-
-        function toggleMenu() {
-
-            const menu = document.getElementById("navLinks");
-
-            menu.classList.toggle("active");
-
-        }
+            <p class="eyebrow">
+                Support the Vision
+            </p>
 
 
-        // Automatically update the copyright year
+            <h2 id="support-title">
+                Keep it spicy!
+            </h2>
 
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+
+            <p>
+
+                We're just getting started.
+
+                As the collective grows, we'll
+                be building the foundation for
+                our future nonprofit work,
+                community projects, land search,
+                and long-term development.
+
+            </p>
 
 
-        // Close mobile menu after clicking a link
+            <!--
+                IMPORTANT:
+                Replace this # link with the actual
+                donation platform when one is established.
+            -->
 
-        document.querySelectorAll("#navLinks a").forEach(link => {
+            <a
+                href="#"
+                class="button"
+                aria-label="Support Neuro Spicy Collective"
+            >
+                Support Neuro Spicy
+            </a>
 
-            link.addEventListener("click", () => {
+        </div>
 
-                document
-                    .getElementById("navLinks")
-                    .classList
-                    .remove("active");
+    </div>
 
-            });
+</section>
 
-        });
+<section id="support" class="section">
+    <div class="container">
 
-    </script>
+        <!-- Section content -->
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </div>
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="#home"
+                    class="logo footer-logo"
+                >
+
+                    <img
+                        src="images/neuro-spicy-header-logo.png"
+                        alt="Neuro Spicy Oregon"
+                        class="footer-logo-image"
+                    >
+
+                </a>
+
+
+                <p>
+
+                    Neuro Spicy Collective is an
+                    Oregon-based collective working
+                    toward a future built around
+                    neurodiversity, community,
+                    land, and possibility.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a
+                        href="https://www.facebook.com/"
+                        class="social-link"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        f
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="social-link"
+                        aria-label="Email"
+                    >
+                        @
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#neurodiversity">
+                            Neurodiversity
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#vision">
+                            Our Vision
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#journey">
+                            Our Journey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#leaders">
+                            Our Leaders
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Connect -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Connect
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a
+                            href="mailto:info@neurospicyoregon.com"
+                        >
+                            Email Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="tel:+15035586229"
+                        >
+                            (503) 558-6229
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                Neuro Spicy Collective LLC.
+                Oregon. All rights reserved.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="script.js"></script>
+
 
 </body>
+
 </html>
