@@ -474,7 +474,139 @@ a:hover {
 
 
 /* =========================================================
-   9. BLOG FEATURED SECTION
+   9. STORY NAVIGATION
+   ========================================================= */
+
+.story-navigation {
+    padding: 0 0 20px;
+
+    background: var(--cream);
+
+    scroll-margin-top: 24px;
+}
+
+.story-navigation-inner {
+    padding: 38px 42px 42px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-soft);
+}
+
+.story-navigation-heading {
+    margin-bottom: 26px;
+}
+
+.story-navigation-heading .blog-eyebrow {
+    margin-bottom: 10px;
+}
+
+.story-navigation-heading h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 900;
+
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+}
+
+.story-button-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.story-button-grid a {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 52px;
+
+    padding: 11px 18px;
+
+    background: var(--light-blue);
+    color: var(--navy);
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.35;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.story-button-grid a:hover,
+.story-button-grid a:focus-visible {
+    background: var(--navy);
+    color: var(--white);
+
+    border-color: var(--navy);
+
+    transform: translateY(-2px);
+}
+
+.story-select-wrapper {
+    display: none;
+}
+
+.blog-featured {
+    scroll-margin-top: 24px;
+}
+
+.blog-featured-card {
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+.blog-featured.is-highlighted .blog-featured-card {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 5px rgba(255, 90, 31, 0.16),
+        var(--shadow-card);
+
+    transform: translateY(-4px);
+}
+
+.back-to-stories {
+    display: inline-block;
+
+    margin-top: 24px;
+
+    color: var(--navy);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.back-to-stories:hover {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   10. BLOG FEATURED SECTION
    ========================================================= */
 
 .blog-featured {
@@ -1708,6 +1840,59 @@ a:hover {
 
     .blog-intro-secondary {
         font-size: 17px;
+    }
+
+
+    /* Story navigation */
+
+    .story-navigation {
+        padding-bottom: 0;
+    }
+
+    .story-navigation-inner {
+        padding: 28px 24px 30px;
+    }
+
+    .story-navigation-heading {
+        margin-bottom: 20px;
+    }
+
+    .story-navigation-heading h2 {
+        font-size: 32px;
+    }
+
+    .story-button-grid {
+        display: none;
+    }
+
+    .story-select-wrapper {
+        display: block;
+    }
+
+    .story-select-wrapper label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--navy);
+
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .story-select-wrapper select {
+        width: 100%;
+
+        padding: 13px 42px 13px 14px;
+
+        background: var(--light-blue);
+        color: var(--navy);
+
+        border: 1px solid var(--border);
+        border-radius: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
     }
 
 
