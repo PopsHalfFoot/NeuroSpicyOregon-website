@@ -207,6 +207,10 @@
             .vision-cards {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .where-we-are .blog-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         @media (max-width: 760px) {
@@ -216,6 +220,15 @@
 
             .vision-card {
                 padding: 28px 24px;
+            }
+
+            .where-we-are .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .where-we-are .blog-card {
+                width: 100%;
+                min-width: 0;
             }
 
             .why-matters-content p {
