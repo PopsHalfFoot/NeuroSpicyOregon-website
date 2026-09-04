@@ -67,6 +67,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    document
+        .querySelectorAll("[data-ga-content-id]")
+        .forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                if (typeof window.gtag !== "function") {
+                    return;
+                }
+
+                window.gtag("event", "select_content", {
+                    content_type: "research_source",
+                    item_id: link.dataset.gaContentId,
+                    source_topic: link.dataset.gaContentId,
+                    content_title:
+                        link.dataset.gaContentTitle ||
+                        link.textContent.trim()
+                });
+            });
+        });
+
+
     window.addEventListener("resize", () => {
 
         if (
