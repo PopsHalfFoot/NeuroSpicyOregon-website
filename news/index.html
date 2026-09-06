@@ -55,6 +55,7 @@
                     <li><a href="../index.html#where-we-are">Where We Are</a></li>
                     <li><a href="../blog/index.html">Blog</a></li>
                     <li><a href="index.html" aria-current="page">News</a></li>
+                    <li><a href="../resources/index.html">Resources</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -105,9 +106,36 @@
                     <p class="feed-order-note">New updates appear first.</p>
                 </header>
 
+                <div class="news-jump" aria-labelledby="news-jump-title">
+                    <div class="news-jump-copy">
+                        <p class="news-jump-label" id="news-jump-title">Looking for something specific?</p>
+                        <p>Choose a headline and jump directly to that news card.</p>
+                    </div>
+                    <div class="news-jump-controls">
+                        <label for="newsJump">Jump to a news story</label>
+                        <div class="news-jump-action">
+                            <select id="newsJump" aria-describedby="newsJumpHelp">
+                                <option value="">Choose a headline…</option>
+                                <option value="news-molecular-autism-map">Researchers Build the Largest Molecular Map of Autism Yet</option>
+                                <option value="news-student-research-priorities">Neurodivergent Students Say Research Should Focus on Real-World Barriers</option>
+                                <option value="news-adhd-children-data">New Data Show How Common ADHD Is Among U.S. Children</option>
+                                <option value="news-workplace-disclosure">Workplace Awareness Is Growing—but Fear of Disclosure Remains</option>
+                                <option value="news-gaze-tracking-autism">What gaze-tracking research can—and can't—tell us</option>
+                                <option value="news-sensory-seeking-executive-function">Sensory-seeking and executive function in young autistic children</option>
+                                <option value="news-late-diagnosis-gender-diversity">Late diagnosis and gender diversity</option>
+                                <option value="news-acetaminophen-evidence">Stronger controls weaken reported acetaminophen links</option>
+                                <option value="news-iacc-comment-period">Federal autism committee extends public comment period</option>
+                                <option value="news-online-neurodivergence-conversations">Three tensions shaping neurodivergence conversations online</option>
+                            </select>
+                            <button type="button" id="newsJumpButton" disabled>Go</button>
+                        </div>
+                        <p class="news-jump-help" id="newsJumpHelp">Headlines are listed newest first.</p>
+                    </div>
+                </div>
+
                 <!-- Add each new card directly below this comment. -->
                 <div class="news-card-grid">
-                    <article class="news-card">
+                    <article class="news-card" id="news-molecular-autism-map">
                         <div class="news-card-topline">
                             <span class="news-type">Science &amp; research</span>
                             <time class="news-date" datetime="2026-08-27">August 27, 2026</time>
@@ -146,7 +174,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-student-research-priorities">
                         <div class="news-card-topline">
                             <span class="news-type">Mental health &amp; education</span>
                             <time class="news-date" datetime="2026-07-31">July 31, 2026</time>
@@ -189,7 +217,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-adhd-children-data">
                         <div class="news-card-topline">
                             <span class="news-type">ADHD &amp; children</span>
                             <time class="news-date" datetime="2026-07-08">Updated July 8, 2026</time>
@@ -231,7 +259,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-workplace-disclosure">
                         <div class="news-card-topline">
                             <span class="news-type">Workplace &amp; technology</span>
                             <time class="news-date" datetime="2026-05-12">May 12, 2026</time>
@@ -275,7 +303,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-gaze-tracking-autism">
                         <div class="news-card-topline">
                             <span class="news-type">Research</span>
                         </div>
@@ -297,7 +325,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-sensory-seeking-executive-function">
                         <div class="news-card-topline">
                             <span class="news-type">Research</span>
                         </div>
@@ -318,7 +346,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-late-diagnosis-gender-diversity">
                         <div class="news-card-topline">
                             <span class="news-type">Research</span>
                         </div>
@@ -340,7 +368,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-acetaminophen-evidence">
                         <div class="news-card-topline">
                             <span class="news-type">Research</span>
                         </div>
@@ -364,7 +392,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-iacc-comment-period">
                         <div class="news-card-topline">
                             <span class="news-type">Policy &amp; community</span>
                         </div>
@@ -390,7 +418,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card" id="news-online-neurodivergence-conversations">
                         <div class="news-card-topline">
                             <span class="news-type">Culture &amp; conversation</span>
                             <span class="evidence-label">Discussion, not evidence</span>
@@ -454,6 +482,7 @@
                         <li><a href="../index.html#vision">What We're Building</a></li>
                         <li><a href="../blog/index.html">Blog</a></li>
                         <li><a href="index.html">Neurodivergent News</a></li>
+                        <li><a href="../resources/index.html">Community Resources</a></li>
                     </ul>
                 </div>
 
@@ -475,6 +504,7 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

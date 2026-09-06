@@ -616,6 +616,22 @@ button {
     color: var(--navy);
 }
 
+.button-science {
+    background: var(--blue);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 30px rgba(18, 100, 163, 0.28);
+}
+
+.button-science:hover {
+    background: #278bd1;
+
+    box-shadow:
+        0 16px 38px rgba(18, 100, 163, 0.36);
+}
+
 .button-dark {
     background: var(--navy);
 
