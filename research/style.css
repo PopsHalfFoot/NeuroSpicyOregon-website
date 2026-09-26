@@ -180,6 +180,10 @@
     box-shadow: var(--shadow-medium);
 }
 
+.research-card + .research-card {
+    margin-top: 34px;
+}
+
 .research-card-tags {
     display: flex;
     flex-wrap: wrap;
