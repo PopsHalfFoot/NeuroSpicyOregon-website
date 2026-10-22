@@ -1,0 +1,45 @@
+.skip-link { position: absolute; left: 12px; top: -100px; z-index: 1000; padding: 10px 15px; border-radius: 8px; background: #fff; color: #06162b; font-weight: 800; }
+.skip-link:focus { top: 12px; }
+.metro-preview-hero {
+    padding: clamp(54px, 8vw, 100px) 0 80px;
+    color: #fff;
+    background: radial-gradient(circle at 82% 24%, rgba(255, 104, 24, .24), transparent 28%), linear-gradient(135deg, #06162b, #0d3155);
+}
+.metro-preview-hero .container { max-width: 1060px; }
+.metro-preview-hero h1 { max-width: 940px; margin: 14px 0 22px; color: #fff; font-size: clamp(3rem, 7vw, 5.6rem); line-height: .98; letter-spacing: -.055em; }
+.metro-preview-hero p { max-width: 760px; color: #e4edf6; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.65; }
+.metro-preview-hero .eyebrow { color: #ffad75; font-size: .8rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.metro-preview-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.metro-preview-meta span { display: inline-block; padding: 8px 13px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: #fff; font-size: .8rem; font-weight: 800; }
+.metro-preview-back { color: #fff; font-weight: 800; }
+.metro-preview-intro { padding: 55px 0 65px; background: #fff; }
+.metro-preview-intro-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); gap: clamp(25px, 5vw, 70px); align-items: start; }
+.metro-preview-intro h2, .metro-preview-section h2, .metro-preview-closing h2 { margin: 0 0 16px; color: var(--navy); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: -.035em; }
+.metro-preview-intro p { max-width: 770px; color: #33485f; font-size: 1.05rem; line-height: 1.7; }
+.metro-preview-note { padding: 25px; border-left: 5px solid var(--orange); border-radius: 0 16px 16px 0; background: #fff1e9; }
+.metro-preview-note h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.15rem; }
+.metro-preview-note p { margin: 0; font-size: .95rem; }
+.metro-preview-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.metro-preview-jump a { padding: 10px 15px; border: 1px solid #cddbe8; border-radius: 999px; color: var(--navy); font-size: .9rem; font-weight: 800; text-decoration: none; }
+.metro-preview-jump a:hover, .metro-preview-jump a:focus-visible { border-color: var(--orange); color: #ab4408; }
+.metro-preview-section { padding: 72px 0 82px; scroll-margin-top: 30px; }
+.metro-preview-section:nth-of-type(even) { background: #f5f8fb; }
+.metro-preview-section .eyebrow { color: #a94c12; font-size: .78rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.metro-preview-section-lede { max-width: 770px; margin: 0 0 30px; color: #405a76; font-size: 1.06rem; }
+.metro-preview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.metro-preview-card { display: flex; flex-direction: column; min-width: 0; padding: 27px; border: 1px solid #dce5ee; border-top: 5px solid var(--orange); border-radius: 0 0 18px 18px; background: #fff; box-shadow: var(--shadow-small); }
+.metro-preview-card .metro-place { margin: 0 0 8px; color: #a94c12; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.metro-preview-card h3 { margin: 0 0 12px; color: var(--navy); font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.22; }
+.metro-preview-card p { margin: 0 0 15px; color: #33485f; line-height: 1.63; }
+.metro-preview-card .metro-audience { color: #52677e; font-size: .9rem; font-weight: 800; }
+.metro-preview-card .metro-warning { padding: 11px 13px; border-radius: 9px; background: #fff1e9; color: #713d1d; font-size: .9rem; font-weight: 800; }
+.metro-preview-card a { align-self: flex-start; margin-top: auto; color: #126aa5; font-weight: 900; text-underline-offset: 4px; }
+.metro-preview-card a:hover { color: #a94c12; }
+.metro-preview-closing { padding: 70px 0 85px; background: #eaf4ff; }
+.metro-preview-closing ul { columns: 2; column-gap: 40px; max-width: 1040px; padding-left: 22px; }
+.metro-preview-closing li { break-inside: avoid; margin: 0 0 13px; line-height: 1.55; }
+@media (max-width: 760px) {
+    .metro-preview-intro-grid, .metro-preview-grid { grid-template-columns: 1fr; }
+    .metro-preview-closing ul { columns: 1; }
+    .metro-preview-section { padding: 52px 0 62px; }
+}
